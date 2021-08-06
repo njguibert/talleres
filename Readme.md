@@ -9,7 +9,7 @@ Repositorio con los talleres generados
 
 ### TIPY - Sistemas Operativos
 
-* [Taller 1](http://www.github)
+* [Taller 1](https://github.com/njguibert/talleres/blob/main/Sistemas%20Operativos/Taller%201/Taller%201.md)
 
 ### TIPY - Administración de Infraestructuras
 
