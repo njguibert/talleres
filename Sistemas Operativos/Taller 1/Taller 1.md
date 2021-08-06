@@ -12,6 +12,8 @@ En ambos sistemas operativos comenzaremos con la gestion desde la CLI (Command L
 
 Brevemente comentaremos que el servicio Servidor, al momento de ejecutarse por defecto comenzara a "escuchar" las peticiones de los clientes en el puerto número 22 del protocolo tcp. Por lo que es importante brindarle los permisos necesarios en caso de tener un servicio de firewall o implementado.
 
+![a!](./assets/images/putty-3678638_640.png "logo")
+
 ## Objetivos del taller
 
 1. Configuracion PortForwarding en nuestro hipervisor.
@@ -116,6 +118,8 @@ Existen muchos atajos(estos son algunos) en la edición de los comandos que ingr
 
 
 ## 4. Cambiar la contraseña del usuario.
+
+![a!](./assets/images/password-2781614_640.jpg "logopassword")
 
 Con el comando ***passwd*** podemos cambiar la contraseña del usuario actual y si tenemos los privilegios necesarios podemos pasar como argumento el nombre del usuario al que queremos realizar el cambio.
 
