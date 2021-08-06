@@ -8,7 +8,7 @@ Finalizado el proceso de instalación ya tenemos dos Sistemas Operativos(SOs) al
 
 ambos instalado en el mismo equipo (maquina virtual), compartiendo el mismo disco y con un gestor de arranque dual.
 
-En ambos sistemas operativos comenzaremos con la gestion desde la CLI (Command Line Interface), para ello la primera "configuración" a realizar sera la habilitación de uno de los servicios de terminal remoto mas utilizado SSH, especificamente la implementación OpenSSH.
+En ambos sistemas operativos comenzaremos con la gestión desde la CLI (Command Line Interface), para ello la primera "configuración" a realizar sera la habilitación de uno de los servicios de terminal remoto mas utilizado SSH, específicamente la implementación OpenSSH.
 
 Brevemente comentaremos que el servicio Servidor, al momento de ejecutarse por defecto comenzara a "escuchar" las peticiones de los clientes en el puerto número 22 del protocolo tcp. Por lo que es importante brindarle los permisos necesarios en caso de tener un servicio de firewall o implementado.
 
@@ -16,7 +16,7 @@ Brevemente comentaremos que el servicio Servidor, al momento de ejecutarse por d
 
 ## Objetivos del taller
 
-1. Configuracion PortForwarding en nuestro hipervisor.
+1. Configuración PortForwarding en nuestro hipervisor.
 2. Conectar y loguearnos en nuestros SOs.
 3. Ejecutar algunos comandos para ver el estado del SO(DEB).
 4. Cambiar la contraseña del usuario(DEB).
@@ -28,17 +28,17 @@ Brevemente comentaremos que el servicio Servidor, al momento de ejecutarse por d
 ![a!](./assets/images/vbox_logo2_gradient.png "logo")
 
 ## 2. Conectar y loguearnos en nuestro SO.
-El acceso a una CLI remota puede realizarse mediante el protocolo telnet, de hecho hace unas decadas era el estandar por defecto, su simpleza hace posible que el intercambio de comandos entre una sesion se realice muy facilmente entre ambos nodos o equipos conectados en una red. El problema es que esa simpleza tiene el defecto de no implementar ningun mecanismo de cifrado, lo que hace muy facil que esa sesion remota se pueda capturar para observar los datos que por ahi circuilan.
+El acceso a una CLI remota puede realizarse mediante el protocolo telnet, de hecho hace unas décadas era el estándar por defecto, su simpleza hace posible que el intercambio de comandos entre una sesión se realice muy fácilmente entre ambos nodos o equipos conectados en una red. El problema es que esa simpleza tiene el defecto de no implementar ningun mecanismo de cifrado, lo que hace muy fácil que esa sesión remota se pueda capturar para observar los datos que por ahí son trasmitidos.
 
 Es por esto que es mas seguro utilizar el protocolo SSH.
 
-Para conectarnos al servidor SSH utilizamos un cliente SSH, en la mayoria de sistemas operativos Linux o Unix, es muy probable que al iniciar una terminal e ingresando el comando ssh ya podemos comenzar a establecer una nueva sesión con un servidor.
+Para conectarnos al servidor SSH utilizamos un cliente SSH, en la mayoría de sistemas operativos Linux o Unix, es muy probable que al iniciar una terminal e ingresando el comando ssh ya podemos comenzar a establecer una nueva sesión con un servidor.
 
-En las últimas versiones de Windows 10 en la terminal ya se esta incorporando el cliente ssh(OpenSSH Client) pero en caso de no tenerlo podemos ejecutar un cliente de terminales llamado [Putty](https://www.putty.org/) o si tenemos habilitado [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+En las últimas versiones de Windows 10 en la terminal ya se esta incorporando el cliente ssh (OpenSSH Client) pero en caso de no tenerlo podemos ejecutar un cliente de terminales llamado [Putty](https://www.putty.org/) o si tenemos habilitado [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
     ssh user@<ip address> -p <portnumber>
 
-Descripcion:
+Descripción:
 
 1.user: usuario para autenticarnos.
 
@@ -54,12 +54,12 @@ Ejemplo:
 
 >Ejemplo: Primera conexión![a!](./assets/images/ssh1.png "logo")
 
-Si es la primera vez que nos conectamos a esa dirección IP, nos aparecera una advertencia solicitando confirmación del fingerprint del servidor. De esta manera de almacenara en la cache especificamente en el archivo .ssh\known_hosts.
+Si es la primera vez que nos conectamos a esa dirección IP, nos aparecerá una advertencia solicitando confirmación del fingerprint del servidor. De esta manera de almacenara en la cache específicamente en el archivo .ssh\known_hosts.
 
 
 >Else: si no es la primera vez que nos conectamos a esa IP y el fingerprint del que tenemos almacenado en la cache no coincide con el fingerprint del servidor, estamos ante:
 1. Estamos siendo engañados y estamos ingresando a un servidor diferente.
-2. Podriamos ser victimas de un ataque MITM(Man in the Middle).
+2. Podríamos ser victimas de un ataque MITM(Man in the Middle).
 
 Una vez iniciado sesión correctamente, por lo general tenemos(si aun no lo personalizamos) el formato ***usuario@hostname ~ $*** :
 1. usuario: nombre del usuario de esa sesión.
@@ -75,7 +75,7 @@ Una vez iniciado sesión correctamente, por lo general tenemos(si aun no lo pers
 
 Para el ingreso de comandos, se escriben y se presiona la tecla Enter. Si el comando es válido se ejecuta, de lo contrario se informa con un mensaje de error.
 
-Al igual que otros SO, se buscaran los comandos al querer ejecutar en los directorios indicados en la variable de entorno $PATH, pero existen comandos que no están almacenados en disco, sino que en todo momento están cargados en memroia. Estos son los comandos internos de la Shell. Ejemplo: ***cd,chdir,alias,set,export***
+Al igual que otros SO, se buscaran los comandos al querer ejecutar en los directorios indicados en la variable de entorno $PATH, pero existen comandos que no están almacenados en disco, sino que en todo momento están cargados en memoria. Estos son los comandos internos de la Shell. Ejemplo: ***cd,chdir,alias,set,export***
 
 Los comandos pueden tener la siguiente sintaxis:
 
@@ -146,7 +146,6 @@ Si no se protegió la llave privada con una “frase de contraseña” al moment
 ### Copiarlo al usuario correspondiente en el servidor.
 
 El usuario lo puede realizar mediante ***ssh-copy-id servidor*** para agregar su llave publica al archivo ~/.ssh/authorized_keys en el servidor. O editando el archivo anterior agregando la la llave publica generada anteriormente.
-
 
 
 
