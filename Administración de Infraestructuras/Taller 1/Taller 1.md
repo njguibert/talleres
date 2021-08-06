@@ -26,7 +26,9 @@ Por último se debera de descargar la imagen para que instalemos mediante el das
 
 ## 1. Configuración PortForwarding de nuestro hipervisor.
 
-![a!](./assets/images/vbox_logo2_gradient.png "logo")
+Como el modo de conexión a la red es mediante NAT, tendremos que redireccionar los ***puertos*** de los distintos servicios de red que necesitemos acceder desde nuestro equipo Host hacia el virtual(vm).
+
+![a!](./assets/images/portforwarding.png "logo")
 
 ## 2. Iniciar sesión mediante ssh.
 El acceso a una CLI remota puede realizarse mediante el protocolo telnet, de hecho hace unas décadas era el estándar por defecto, su simpleza hace posible que el intercambio de comandos entre una sesión se realice muy fácilmente entre ambos nodos o equipos conectados en una red. El problema es que esa simpleza tiene el defecto de no implementar ningun mecanismo de cifrado, lo que hace muy fácil que esa sesión remota se pueda capturar para observar los datos que por ahí son trasmitidos.
@@ -92,3 +94,7 @@ Ingresando el usuario root y la contraseña configurada en el proceso de instala
 ## 4. Captura
 
 En la plataforma bajo el nombre Taller 1 "Mi primer contenedor en Proxmox VE" , cada uno sube una captura de pantalla de su contenedor, acceso ssh desde su equipo Host.
+
+Llegado a este momento es una buena idea que publique su trabajo para mostrar su avance en el curso. Con una captura de pantalla de un acceso mediante ssh desde su equipo Host en https://chat.jesusguibert.com/channel/Infra
+
+También puede utilizar el chat para consultas,dudas y realizar aportes relacionado a la asignatura.

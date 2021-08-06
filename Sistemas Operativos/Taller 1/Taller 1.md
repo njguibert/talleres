@@ -21,11 +21,15 @@ Brevemente comentaremos que el servicio Servidor, al momento de ejecutarse por d
 3. Ejecutar algunos comandos para ver el estado del SO(DEB).
 4. Cambiar la contraseña del usuario(DEB).
 5. Autenticarnos mediante un certificado RSA(DEB).
+6. Publique su trabajo.
 
 
 ## 1. Configuración PortForwarding de nuestro hipervisor.
 
-![a!](./assets/images/vbox_logo2_gradient.png "logo")
+Como el modo de conexión a la red es mediante NAT, tendremos que redireccionar los ***puertos*** de los distintos servicios de red que necesitemos acceder desde nuestro equipo Host hacia el virtual(vm).
+
+![a!](./assets/images/portforwarding.png "logo")
+
 
 ## 2. Conectar y loguearnos en nuestro SO.
 El acceso a una CLI remota puede realizarse mediante el protocolo telnet, de hecho hace unas décadas era el estándar por defecto, su simpleza hace posible que el intercambio de comandos entre una sesión se realice muy fácilmente entre ambos nodos o equipos conectados en una red. El problema es que esa simpleza tiene el defecto de no implementar ningun mecanismo de cifrado, lo que hace muy fácil que esa sesión remota se pueda capturar para observar los datos que por ahí son trasmitidos.
@@ -148,8 +152,8 @@ Si no se protegió la llave privada con una “frase de contraseña” al moment
 El usuario lo puede realizar mediante ***ssh-copy-id servidor*** para agregar su llave publica al archivo ~/.ssh/authorized_keys en el servidor. O editando el archivo anterior agregando la la llave publica generada anteriormente.
 
 
+## 6. Publique su trabajo
 
+Llegado a este momento es una buena idea que publique su trabajo para mostrar su avance en el curso. Con alguanas capturas de sus sistemas duales en https://chat.jesusguibert.com/channel/SistOper
 
-
-
-
+También puede utilizar el chat para consultas,dudas y realizar aportes relacionado a la asignatura.
