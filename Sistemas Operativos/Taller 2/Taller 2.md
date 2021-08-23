@@ -92,6 +92,7 @@ Finalizado el proceso de descarga e instalación de QEMU en nuestro equipo Host,
 Ahora podremos iniciar el binario compilado anteriormente en una vm(virtual machine) con un cpu de arquitectura x86:
 >qemu-system-x86_64 main.bin
 
+
 ![a!](./assets/images/7.png "logo") Qemu ejecutando nuestro binario compilado en NASM
 
 ## 4. Publique su trabajo
