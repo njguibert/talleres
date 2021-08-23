@@ -93,7 +93,8 @@ Ahora podremos iniciar el binario compilado anteriormente en una vm(virtual mach
 >qemu-system-x86_64 main.bin
 
 Eje:
-![a!](./assets/images/7.png "logo") Qemu ejecutando nuestro binario compilado en NASM
+![a!](./assets/images/6.png "logo")
+![a!](./assets/images/7.png "logo")Qemu ejecutando nuestro binario compilado en NASM
 
 ## 4. Publique su trabajo
 
