@@ -52,7 +52,7 @@ El Netwide Assembler o NASM, es un ensamblador libre para la plataforma Intel x8
 Finalizado el proceso de descarga e instalación de NASM en nuestro equipo Hosts, se deberá de cargar la ruta absoluta de los binarios en la variable de entorno PATH. Para comenzar a utilizar los binarios desde una CLI.
 
 >![a!](./assets/images/4.png "logo")Contenido de la variable PATH en un HOST con Windows.
->![a!](./assets/images/5.png "logo")Ejecución de nasm en la CLI
+>![a!](./assets/images/5.PNG "logo")Ejecución de nasm en la CLI
 
 Ahora podemos generar nuestro código en ensamblador:
 
@@ -92,7 +92,7 @@ Finalizado el proceso de descarga e instalación de QEMU en nuestro equipo Host,
 Ahora podremos iniciar el binario compilado anteriormente en una vm(virtual machine) con un cpu de arquitectura x86:
 >qemu-system-x86_64 main.bin
 
-![a!](./assets/images/7.png "logo")Qemu ejecutando nuestro binario compilado en NASM
+![a!](./assets/images/7.PNG "logo")Qemu ejecutando nuestro binario compilado en NASM
 
 ## 4. Publique su trabajo
 
